@@ -1,0 +1,21 @@
+{
+  "name": "purescript-lcg",
+  "homepage": "https://github.com/purescript/purescript-lcg",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/purescript/purescript-lcg.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-random": "^3.0.0"
+  }
+}
