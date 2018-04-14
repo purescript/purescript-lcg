@@ -16,6 +16,6 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-random": "^3.0.0"
+    "purescript-random": "purescript/purescript-random#compiler/0.12"
   }
 }
