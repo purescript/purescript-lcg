@@ -12,8 +12,8 @@ module Random.LCG
 
 import Prelude
 
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.Random (RANDOM, randomInt)
+import Effect (Effect)
+import Effect.Random (randomInt)
 import Data.Int (fromNumber, toNumber)
 import Data.Maybe (fromJust)
 import Math ((%))
@@ -45,7 +45,7 @@ unSeed :: Seed -> Int
 unSeed (Seed x) = x
 
 -- | Create a random seed
-randomSeed :: forall e. Eff (random :: RANDOM | e) Seed
+randomSeed :: Effect Seed
 randomSeed = mkSeed <$> randomInt seedMin seedMax
 
 -- | The minimum permissible Seed value.
