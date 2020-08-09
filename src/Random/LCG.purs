@@ -74,11 +74,11 @@ lcgM = 2147483647
 -- | Perturb a seed value
 -- | Note that `Int` operations are truncated to 32-bits, so we convert to
 -- | `Number` for this calculation to avoid overflow errors.
-lcgPerturb :: Number -> Seed -> Seed
+lcgPerturb :: Int -> Seed -> Seed
 lcgPerturb d (Seed n) =
   Seed $ unsafePartial fromJust $ fromNumber $
-    (toNumber lcgA * toNumber n + d) % toNumber lcgM
+    (toNumber lcgA * toNumber n + toNumber d) % toNumber lcgM
 
 -- | Step the linear congruential generator
 lcgNext :: Seed -> Seed
-lcgNext = lcgPerturb (toNumber lcgC)
+lcgNext = lcgPerturb lcgC
