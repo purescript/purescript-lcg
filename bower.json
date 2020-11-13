@@ -16,12 +16,12 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-effect": "^2.0.0",
-    "purescript-integers": "^4.0.0",
-    "purescript-math": "^2.1.1",
-    "purescript-maybe": "^4.0.0",
-    "purescript-partial": "^2.0.0",
-    "purescript-prelude": "^4.0.0",
-    "purescript-random": "^4.0.0"
+    "purescript-effect": "master",
+    "purescript-integers": "master",
+    "purescript-math": "master",
+    "purescript-maybe": "master",
+    "purescript-partial": "master",
+    "purescript-prelude": "master",
+    "purescript-random": "master"
   }
 }
