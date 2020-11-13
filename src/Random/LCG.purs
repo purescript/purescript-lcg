@@ -72,8 +72,8 @@ lcgM :: Int
 lcgM = 2147483647
 
 -- | Perturb a seed value
--- | Note that `Int` operations are truncated to 32-bits, so we convert to
--- | `Number` for this calculation to avoid overflow errors.
+-- Note that `Int` operations are truncated to 32-bits, so we convert to
+-- `Number` for this calculation to avoid overflow errors.
 lcgPerturb :: Int -> Seed -> Seed
 lcgPerturb d (Seed n) =
   Seed $ unsafePartial fromJust $ fromNumber $
