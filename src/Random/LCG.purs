@@ -16,7 +16,7 @@ import Effect (Effect)
 import Effect.Random (randomInt)
 import Data.Int (fromNumber, toNumber)
 import Data.Maybe (fromJust)
-import Math ((%))
+import Data.Number ((%))
 import Partial.Unsafe (unsafePartial)
 
 -- | A seed for the linear congruential generator. We omit a `Semiring`
