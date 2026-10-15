@@ -11,6 +11,7 @@ Other improvements:
 ## [v4.0.0](https://github.com/purescript/purescript-lcg/releases/tag/v4.0.0) - 2022-04-27
 
 Breaking changes:
+
 - Update project and deps to PureScript v0.15.0 (#15 by @JordanMartinez)
 
 New features:
@@ -18,11 +19,13 @@ New features:
 Bugfixes:
 
 Other improvements:
+
 - Drop `math` dependency; update imports (#16 by @JordanMartinez)
 
 ## [v3.0.0](https://github.com/purescript/purescript-lcg/releases/tag/v3.0.0) - 2021-02-26
 
 Breaking changes:
+
 - Added support for PureScript 0.14 and dropped support for all previous versions (#9)
 
 New features:
@@ -30,6 +33,7 @@ New features:
 Bugfixes:
 
 Other improvements:
+
 - Fix minor typo: psuedorandom -> pseudorandom (#3)
 - Moved number conversion implementation details from public documentation comment to internal code (#7)
 - Migrated CI to GitHub Actions and updated installation instructions to use Spago (#10)
