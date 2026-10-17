@@ -34,12 +34,11 @@ mkSeed :: Int -> Seed
 mkSeed x = Seed (ensureBetween seedMin seedMax x)
   where
   ensureBetween :: Int -> Int -> Int -> Int
-  ensureBetween min max n =
+  ensureBetween min max n = do
     let
       rangeSize = max - min
       n' = n `mod` rangeSize
-    in
-      if n' < min then n' + max else n'
+    if n' < min then n' + max else n'
 
 unSeed :: Seed -> Int
 unSeed (Seed x) = x
