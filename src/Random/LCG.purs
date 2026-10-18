@@ -12,11 +12,11 @@ module Random.LCG
 
 import Prelude
 
-import Effect (Effect)
-import Effect.Random (randomInt)
 import Data.Int (fromNumber, toNumber)
 import Data.Maybe (fromJust)
 import Data.Number ((%))
+import Effect (Effect)
+import Effect.Random (randomInt)
 import Partial.Unsafe (unsafePartial)
 
 -- | A seed for the linear congruential generator. We omit a `Semiring`
@@ -33,13 +33,12 @@ instance showSeed :: Show Seed where
 mkSeed :: Int -> Seed
 mkSeed x = Seed (ensureBetween seedMin seedMax x)
   where
-    ensureBetween :: Int -> Int -> Int -> Int
-    ensureBetween min max n =
-      let
-        rangeSize = max - min
-        n' = n `mod` rangeSize
-      in
-        if n' < min then n' + max else n'
+  ensureBetween :: Int -> Int -> Int -> Int
+  ensureBetween min max n = do
+    let
+      rangeSize = max - min
+      n' = n `mod` rangeSize
+    if n' < min then n' + max else n'
 
 unSeed :: Seed -> Int
 unSeed (Seed x) = x
